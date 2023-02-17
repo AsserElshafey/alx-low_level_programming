@@ -14,5 +14,5 @@ for (x=0 ; x<100 ; x++)
 {
 	printf("%i\n", x);
 }
-return (0)
+return (0);
 }
