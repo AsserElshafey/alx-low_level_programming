@@ -10,12 +10,7 @@ int main(void)
 {
 char x;
 
-for (x = 0 ; x < 10 ; x++)
-{
-	putchar(x);
-}
-
-for (x = 'A' ; x <= 'F' ; x++)
+for (x = 48 ; x <= 57 ; x++ && x = 'a' ; x <= 'f' ; x++)
 {
 	putchar(x);
 }
