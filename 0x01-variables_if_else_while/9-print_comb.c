@@ -18,6 +18,6 @@ for (x = 48 ; x <= 57 ; x++)
 		putchar(' ');
 	}
 }
-putcahr('\n');
+putchar('\n');
 return (0);
 }
