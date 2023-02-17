@@ -15,7 +15,7 @@ for (x = 48 ; x <= 57 ; x++)
 	if (x != 57)
 	{
 		putchar(',');
-		putcahr(' ');
+		putchar(' ');
 	}
 }
 putcahr('\n');
