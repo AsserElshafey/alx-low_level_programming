@@ -10,9 +10,9 @@ int main(void)
 {
 int x;
 
-for (x=0 ; x<100 ; x++)
+for (x=0 ; x<10 ; x++)
 {
-	printf("%i\n", x);
+	printf("%i", '\n', x);
 }
 return (0);
 }
