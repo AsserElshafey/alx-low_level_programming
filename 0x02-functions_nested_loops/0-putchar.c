@@ -2,13 +2,14 @@
 
 int main(void){
 
-	char c;
+	char x[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	int c;
+	for (c = 0; c < sizeof(c); c++){
+		_putchar(x[c]);
+	}
 
-	c = "_putchar";
-
-	_putchar(c);
+	
 
 	_putchar('\n');
-
 	return (0);
 }
