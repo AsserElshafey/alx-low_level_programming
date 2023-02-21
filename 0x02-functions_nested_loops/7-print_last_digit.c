@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_last_digit - function that computes the absolute value of an integer
  * @c:  is the int that will use for the argument of the function
@@ -7,15 +7,14 @@
  */
 int print_last_digit(int c)
 {
-	if (c > 0 || c == 0)
+	int x;
+
+	x = (c % 10);
+
+	if (x < 0)
 	{
-	_putchar (c % 10 + '0');
-	return (c % 10);
+		x = (-1 * x);
 	}
-	else
-	{
-	c = c * -1;
-	_putchar (c % 10 + '0');
-	return (c % 10);
-	}
+	_putchar(x + '0');
+	return (x);
 }
