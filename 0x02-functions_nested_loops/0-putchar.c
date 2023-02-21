@@ -2,6 +2,7 @@
 
 
 char ok(){
-	retrun "_putcahr";
-	putchar('\n');
+	char c = "_putchar";
+	_putchar(c);
+	_putchar('\n');
 }
