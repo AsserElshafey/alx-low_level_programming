@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-void putchar(){
+char ok(){
 	retrun "_putcahr";
 	putchar('\n');
 }
