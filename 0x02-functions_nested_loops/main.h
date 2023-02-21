@@ -2,7 +2,7 @@
 #define alx_school
 
 int _putchar(char);
-
+void print_alphabet(void);
 
 
 
