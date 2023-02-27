@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _atoi - Entry point
@@ -7,6 +8,17 @@
  */
 int _atoi(char *s)
 {
+	int res = 0;
+	int sign = 1;
+	int i = 0;
 
-	return (0);
+	if (s[0] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	for (; s[i] != ''; ++i)
+		res = res * 10 + s[i] - '0';
+
+	return (sign * res);
 }
