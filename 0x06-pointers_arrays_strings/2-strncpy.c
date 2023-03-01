@@ -9,6 +9,11 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
-	while(i++ != n && (*dest++ = *src++));
+	int i;
+	char *temp;
+	temp = dst;  
+	for (i = 0; i < n; i++)
+		*dst++ = *src++;
+	for (; n-- ; *dst++ = '\0');
+	return temp;
 }
