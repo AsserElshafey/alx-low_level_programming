@@ -9,11 +9,18 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
-	char *temp;
-	temp = dest;  
-	for (i = 0; i < n; i++)
-		*dest++ = *src++;
-	for (; n-- ; *dest++ = '\0');
-	return temp;
+	int i, co;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
+
+	for (co = 0; co < n; co++)
+	{
+		dest[i + co] = src[i + co];
+		if (src[co] == '\0')
+			co = n;
+	}
+
+	return (dest);
 }
