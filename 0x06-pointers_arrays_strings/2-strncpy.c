@@ -9,20 +9,15 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
- // return if dest and src is NULL
-    if ((dest == NULL) &&(src == NULL))
-        return NULL;
-    // take a pointer pointing to the beginning of dest string
-    char* start = dest;
-    // copy first n characters of C-string pointed by src
-    // into the array pointed by dest
-    while (*src && n--)
-    {
-        *dest = *src;
-        dest++;
-        src++;
-    }
-    // null terminate dest string
+	if ((dest == NULL) &&(src == NULL))
+	return NULL;
+	char* start = dest;
+	while (*src && n--)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
 	*dest = '\0';
 	return start;
 }
