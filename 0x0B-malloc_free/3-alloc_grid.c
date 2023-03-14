@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-void freeing(int **heap_array, int height);
 
 /**
  * alloc_grid - Allocates a grid based on height and width
@@ -46,20 +45,4 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	return (heap_array);
-}
-
-/**
- * freeing - frees an array
- * @heap_array: An array
- * @height: An integer
- */
-void freeing(int **heap_array, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-	{
-		free(heap_array[i]);
-	}
-	free(heap_array);
 }
