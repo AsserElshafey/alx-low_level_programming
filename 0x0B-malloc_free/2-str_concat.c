@@ -15,15 +15,15 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL || s2 == NULL)
 		s1 = s2 = "";
 
-	for (end1 = 0; end1 <= *s1; end1++)
+	for (end1 = 0; s1[end1] != '\0'; end1++)
 	{
 	}
 
-	for (end2 = 0; end2 <= *s2; end2++)
+	for (end2 = 0; s2[end2] != '\0'; end2++)
 	{
 	}
 
-	array = malloc(sizeof(char) * (end1 + end2 + 1));
+	array = malloc(end1 + end2 + 1);
 
 	if (array == NULL)
 		return (NULL);
