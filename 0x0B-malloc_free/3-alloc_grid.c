@@ -1,41 +1,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+void freeing(int **heap_array, int height);
+
 /**
- * alloc_grid - nested loop to make grid
- * @width: width input
- * @height: height input
- * Return: pointer to 2 dim. array
+ * alloc_grid - Allocates a grid based on height and width
+ * @width: An integer
+ * @height: An integer
+ * Return: A pointer to the begining of the string
  */
 int **alloc_grid(int width, int height)
 {
-	int **iarray;
-	int i, n;
+	int i;
+	int j;
+	int **heap_array;
 
+	/* Checking for negatives*/
 	if (width <= 0 || height <= 0)
 		return (NULL);
-
-	iarray = malloc(sizeof(int) * height);
-	if (iarray == NULL)
+	/*Allocating memory for rows*/
+	heap_array = malloc(sizeof(int *) * height);
+	if (heap_array == NULL)
 		return (NULL);
+	/*Allocating memory for each collum*/
 	for (i = 0; i < height; i++)
 	{
-		iarray[i] = malloc(sizeof(int) * width);
-		if (iarray[i] == NULL)
+		heap_array[i] = malloc(sizeof(int) * width);
+		if (heap_array[i] == NULL)
 		{
-			for (n = 0; n < i; n++)
+			for (j = 0; j < i; j++)
 			{
-				free(iarray[n]);
+				free(heap_array[j]);
 			}
-			free(iarray);
+			free(heap_array);
+
 		}
+
 	}
+	/*Initializing the array*/
 	for (i = 0; i < height; i++)
 	{
-		for (n = 0; n < width; n++)
+		for (j = 0; j < width; j++)
 		{
-			iarray[i][n] = 0;
+			heap_array[i][j] = 0;
 		}
 	}
-	return (iarray);
+	return (heap_array);
+}
+
+/**
+ * freeing - frees an array
+ * @heap_array: An array
+ * @height: An integer
+ */
+void freeing(int **heap_array, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		free(heap_array[i]);
+	}
+	free(heap_array);
 }
