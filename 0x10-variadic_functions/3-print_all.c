@@ -26,13 +26,13 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(x, int), c);
+				printf("%c%s", va_arg(x, int), c);
 				break;
 			case 'i':
-				printf("%i", va_arg(x, int), c);
+				printf("%i%s", va_arg(x, int), c);
 				break;
 			case 'f':
-				printf("%f", va_arg(x, double), c);
+				printf("%f%s", va_arg(x, double), c);
 				break;
 			case 's':
 				tmp = va_arg(x, char *);
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 				{
 					tmp = "(nil)";
 				}
-				printf("%s", tmp, c);
+				printf("%s%s", tmp, c);
 				break;
 		}
 		i++;
