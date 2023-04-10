@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * create_file - creats a file
+ * append_text_to_file - creats a file
  * @filename: the file name we want
  * @text_content: is null terminator
  * Return: return 1 on success and -1 on failure
  */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int f;
 	ssize_t fw;
