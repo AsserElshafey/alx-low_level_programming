@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * creat_file - creats a file 
+ * create_file - creats a file
  * @filename: the file name we want
  * @text_content: is null terminator
  * Return: return 1 on success and -1 on failure
